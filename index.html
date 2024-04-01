@@ -32,9 +32,7 @@
           color: white;
         }
       }
-      .title {
-        width: 70vw;
-      }
+      
       #container {
         font-size: clamp(0.8rem, 2vw, 1.2rem);
         display: grid;
@@ -59,16 +57,18 @@
         margin-right: 20px;
         text-indent: 1em;
         font-style: oblique;
+        text-align: center;
       }
       .text-title {
         font-size: larger;
         -webkit-text-stroke: 1.5px;
       }
       .sources {
+        padding-top: 250px;
         overflow: auto;
         text-indent: 1em;
         font-size: clamp(0.6rem, 1vw, 0.8rem);
-        height: 100vh;
+        height: 70vh;
       }
       .source {
         margin-top: 20px;
@@ -76,9 +76,10 @@
         transform: rotate(-10deg);
       }
       .text {
+        padding-top: 250px;
         overflow: auto;
         grid-auto-flow: dense;
-        height: 100vh;
+        height: 70vh;
       }
       .text-images {
         width: 100%;
@@ -94,7 +95,11 @@
         text-decoration: none;
         color: black;
       }
-      
+      .title {
+        padding-left: 12%;
+        position: fixed;
+        max-width: 75vw !important;
+      }
     </style>
   </head>
   <body>
@@ -183,15 +188,13 @@
       <a href="#033"><br />&nbsp;&nbsp;&nbsp;&nbsp;8 List of references</a>
       
     </div>
-    <!---<div class="title">
-      <img style="width: 100%" src="img/title.png" alt="" />
-    </div>-->
+    <div class="title">
+      <img class="title" src="img/title.png" alt="">
+    </div>
     <div id="container">
       <div></div>
       <div class="text">
-        <div style="font-size: larger;-webkit-text-stroke: 1.9px;">
-            ... Dancing in between Shiny Gloom and Glossy Doom ...
-        </div>
+        
         <div id="001">
           <p class="text-title">1 Introduction</p>
           <p class="citation">
@@ -226,10 +229,9 @@
           within the relational dynamic between human and machine, ultimately
           proposing a thesis that associatively illustrates this relationship.
         </div>
-
         <div id="002">
           <p class="text-title">2 Space as concept</p>
-          <p class="citation">
+          <p class="citation" >
             “The power of a ‘space’ lies in the possibilities it implies:
             immersion, habitation, ‘being-there,’ phenomenal plenitude,
             unmediated presence, all fall within its domain.”<a href="#c002"
@@ -1150,6 +1152,13 @@
             <p class="image-text-source">
               Detailed construction drawing, Construction grill framing
             </p>
+            <img
+            src="img/tinekerres-dancing.gif"
+            alt=""
+            class="text-images"
+            loop
+            autoplay
+          />
           </div>
           <div id="029">
             <p class="text-title">7.5.3 Letter</p>
@@ -1269,13 +1278,21 @@
           prescribed movements, offering them a firsthand experience of the
           work’s concept.
           <img
-            src="img/tinekerres-dancing.gif"
+            src="img/Letter-panel.JPG"
             alt=""
             class="text-images"
-            loop
-            autoplay
           />
-        </div>
+          <img
+            src="img/Letter-exhibtion.JPG"
+            alt=""
+            class="text-images"
+          />
+          <img
+            src="img/grill-exhibition.JPG"
+            alt=""
+            class="text-images"
+          />
+          </div>
         <div id="033">
           <p class="text-title">8 List of references</p>
           <div>
