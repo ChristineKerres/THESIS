@@ -18,7 +18,11 @@
     url("font/AUTHENTIC\ Sans.otf")
 }
       body {
-        overflow: hidden;
+        height: 5000px !important;
+  width: 5000px !important;
+        overflow: hidden !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
         color: black;
         padding-right: 10px;
         line-height: 1.4;
@@ -36,11 +40,65 @@
       #container {
         font-size: clamp(0.8rem, 2vw, 1.2rem);
         display: grid;
-        grid-template-columns: 30% 50% 20%;
+        grid-template-columns: 25% 55% 20%;
         gap: 40px;
         position: relative;
         width: 90vw;
       }
+      @media only screen and (min-width: 600px) {
+.title-mobile{
+  display: none;
+}
+      }
+
+  @media only screen and (max-width: 600px) {
+        body{
+          width: 100vw;
+          margin: 0;
+        }
+  #container {
+    margin: 0;
+    gap: 0;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 0% 80% 20%;
+    height: 100vh;
+    width: 100vw;
+  }
+  .source{
+    transform: rotate(0deg)!important;
+    text-indent: 0em;
+    margin-top: 0 !important;
+  }
+  .sources{
+    padding: 5px;
+    padding-top: 20px !important;
+    background-color: white;
+    padding-top: 0px;
+        overflow: auto;
+        text-indent: 1em;
+        font-size: 10px !important;
+
+    display: fixed;
+  }
+  .title{
+    display: none;
+  }
+  .table-of-contents{
+    display: none;
+  }
+  .text{
+    padding: 5px;
+    padding-top: 0 !important;
+    height: 100vh !important;
+  }
+  a{
+    pointer-events: none;
+  }
+}
+.title-mobile{
+        max-width: 100% !important;
+}
       .table-of-contents {
         z-index: 9999999999;
         font-size: clamp(0.6rem, 2vw, 0.8rem);
@@ -48,11 +106,12 @@
         left: 20px;
         top: 20px;
         overflow-y: auto;
-        width: 25%;
+        width: 20%;
         color: black;
         font-family: Authentic Sans;
       }
       .citation {
+        
         margin-left: 20px;
         margin-right: 20px;
         text-indent: 1em;
@@ -64,6 +123,7 @@
         -webkit-text-stroke: 1.5px;
       }
       .sources {
+        
         padding-top: 250px;
         overflow: auto;
         text-indent: 1em;
@@ -81,6 +141,7 @@
   display: none;
 }
 .text {
+  font-size: 15px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -114,17 +175,19 @@
         position: fixed;
         max-width: 75vw !important;
       }
-      a:hover {animation: blink 1s linear infinite;}
+a:hover {animation: blink 1s linear infinite;}
 
 @keyframes blink {
 0% {opacity: 1;}
 50% {opacity: 0;}
 100% {opacity: 1;}
 }
+
+
+
     </style>
   </head>
   <body>
-
     <div class="table-of-contents">
       <div style="font-size: 1rem; -webkit-text-stroke: 0.3px black;line-height: 35px;">
         &nbsp;&nbsp;&nbsp;Table of contents
@@ -215,7 +278,10 @@
     <div id="container">
       <div></div>
       <div class="text">
-        
+        <div >
+      <img class="title-mobile"src="img/title-mobile.png" alt="">
+    </div>
+    <div style="text-align: center; margin-bottom: 100px;">to the apathetic user of arrogant machines</div>
         <div id="001">
           <p class="text-title">1 Introduction</p>
           <p class="citation">
@@ -1399,7 +1465,7 @@ Supervision Alexander Roidl <br>
           </div>
         </div>
       </div>
-      <div class="sources">
+      <div  class="sources">
         <div class="source" id="c001">
           1 To the Apathetic User of Arrogant Machines, p. 49 *In this
           discussion, the term machine is understood as computer-aided
